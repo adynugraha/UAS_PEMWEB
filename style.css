@@ -1,0 +1,486 @@
+/* RESET & GLOBAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0f172a; /* biru gelap */
+  min-height: 100vh;
+  color: rgb(248, 242, 242);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+/* CONTAINERS */
+v.login-container,
+.form-container,
+.landing-container,
+.dashboard-container {
+  background: rgba(13, 12, 12, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(249, 248, 248, 0.2);
+  width: 90%;
+  max-width: 1000px;
+}
+
+
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.5s ease;
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0d6efd;
+}
+
+/* FORM ELEMENTS */
+form label {
+  margin-top: 15px;
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border: 1px solid #060404;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+form input:focus {
+  border-color: #0d6efd;
+  outline: none;
+  background-color: #f9f7f7;
+}
+
+/* BUTTON */
+button {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #0d6efd;
+  color: #f4efef;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #084298;
+}
+
+/* LINK */
+a {
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #0d6efd;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #062b72;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .login-container,
+  .form-container {
+    padding: 25px 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+.landing-container {
+  text-align: center;
+  max-width: 600px;
+  padding: 40px;
+  background: rgb(242, 241, 241);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease;
+}
+
+.landing-container h1 {
+  color: #0d6efd;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.landing-container p {
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main-button,
+.main-button-outline {
+  text-decoration: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.main-button {
+  background-color: #0d6efd;
+  color: rgb(244, 244, 244);
+  border: none;
+}
+
+.main-button:hover {
+  background-color: #084298;
+}
+
+.main-button-outline {
+  background-color: transparent;
+  color: #0d6efd;
+  border: 2px solid #0d6efd;
+}
+
+.main-button-outline:hover {
+  background-color: #f4f6f6;
+}
+..login-container,
+.form-container,
+.landing-container,
+.dashboard-container {
+  background: rgba(242, 239, 239, 0.2); /* transparan */
+  backdrop-filter: blur(12px);         /* efek blur */
+  -webkit-backdrop-filter: blur(12px); /* untuk Safari */
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 1000px;
+  animation: fadeIn 0.5s ease;
+}
+ padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  width: 100%;
+  animation: fadeIn 0.5s ease;
+
+
+.dashboard-container h2 {
+  margin-bottom: 10px;
+  color: #0d6efd;
+}
+
+.dashboard-buttons {
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #f7f1f1;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.data-table th {
+  background-color: #0460ea;
+  color: #333;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #6a6868;
+}
+.edit-button,
+.delete-button {
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 0 2px;
+}
+
+.edit-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* efek gelap */
+  z-index: -1;
+}
+table {
+  background-color: rgba(0, 0, 0, 0.6); /* hitam transparan */
+  color: rgb(68, 52, 52);
+  border-collapse: collapse;
+  width: 90%;
+  margin: 30px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #232020;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #4f46e5); /* biru ke ungu */
+  min-height: 100vh;
+  color: rgb(246, 244, 244);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.corner-logo {
+  position: absolute;
+  width: 60px;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.top-left     { top: 10px; left: 10px; }
+.top-right    { top: 10px; right: 10px; }
+.bottom-left  { bottom: 10px; left: 10px; }
+.bottom-right { bottom: 10px; right: 10px; }
+
+
+
+
+h1 {
+  color: rgb(244, 241, 241);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+table {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(245, 242, 242);
+  border-collapse: collapse;
+  width: 60%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+}
+body {
+  background-image: url('img/pusatkursus.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 20px;
+  background-color: rgba(5, 3, 3, 0.8); /* putih transparan */
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  width: auto;
+  max-width: 90%;
+  color: black;
+}
+
+
+tr:nth-child(even) {
+  background-color: rgb(248, 247, 247);
+  color: rgb(3, 2, 2);
+}
+.dashboard-center {
+  position: relative;
+  padding: 25px;
+  background-color: rgba(13, 76, 160, 0.9); /* biru transparan elegan */
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  color: white;
+}
+
+h3 {
+  color: rgb(94, 92, 92);
+}
+
+.form-tambah {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease;
+  color: white;
+}
+
+.form-tambah h2 {
+  text-align: center;
+  color: #0d6efd;
+  margin-bottom: 25px;
+}
+
+.form-tambah label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.form-tambah input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form-tambah button {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.form-tambah button:hover {
+  background-color: #084298;
+}
+
+.action-button {
+  display: inline-block;
+  background-color: #ccc;
+  color: #000;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.action-button:hover {
+  background-color: #999;
+}
+
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+
+
+
+
+
+
